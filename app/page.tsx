@@ -10,6 +10,20 @@ const blueDiamondDirections =
 const springMountainDirections =
   'https://www.google.com/maps/search/?api=1&query=6870+Spring+Mountain+Rd+Las+Vegas+NV+89146';
 
+function FlavorsWord() {
+  return (
+    <span className="flavors-word" aria-label="Flavors">
+      <span className="brand-letter letter-teal" aria-hidden="true">F</span>
+      <span className="brand-letter letter-aqua" aria-hidden="true">l</span>
+      <span className="brand-letter letter-yellow" aria-hidden="true">a</span>
+      <span className="brand-letter letter-orange" aria-hidden="true">v</span>
+      <span className="brand-letter letter-green" aria-hidden="true">o</span>
+      <span className="brand-letter letter-teal" aria-hidden="true">r</span>
+      <span className="brand-letter letter-aqua" aria-hidden="true">s</span>
+    </span>
+  );
+}
+
 export default function Home() {
   return (
     <main className="force-motion">
@@ -25,13 +39,13 @@ export default function Home() {
             Instagram
           </a>
           <a className="order-link" href={orderUrl} target="_blank" rel="noreferrer">
-            Order Now <span aria-hidden="true">↗</span>
+            ORDER NOW <span aria-hidden="true">↗</span>
           </a>
         </nav>
       </header>
 
       <a className="floating-order" href={orderUrl} target="_blank" rel="noreferrer">
-        Order Now <span aria-hidden="true">↗</span>
+        ORDER NOW <span aria-hidden="true">↗</span>
       </a>
 
       <div className="passage-scroll">
@@ -98,7 +112,10 @@ export default function Home() {
             <p>Come Hungry. Bring Somebody.</p>
           </div>
 
-          <p className="opening-hours">Mochi Donuts from 8 · Full Menu 10–7</p>
+          <p className="opening-hours">
+            <span>Mochi Donuts Start @ 8:00AM</span>
+            <span>Full Menu 10:00AM - 7:00PM</span>
+          </p>
           <a className="continue-link" href="#mochi">
             See What’s Hot
           </a>
@@ -134,7 +151,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              Catch This Week’s Flavors ↗
+              Catch This Week’s <FlavorsWord /> ↗
             </a>
           </div>
         </section>
@@ -223,7 +240,9 @@ export default function Home() {
                 <span>Followers</span>
               </p>
             </div>
-            <h2 id="social-title">Already Know Where the Weekly Flavors Drop.</h2>
+            <h2 id="social-title">
+              Already Know When The Weekly <FlavorsWord /> Drop.
+            </h2>
             <a href={instagramUrl} target="_blank" rel="noreferrer">
               Follow Us For Specials ↗
             </a>

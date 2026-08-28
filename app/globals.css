@@ -342,6 +342,28 @@ main:not(.force-motion) .opening-video {
   color: var(--green);
 }
 
+.flavors-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.flavors-word .brand-letter {
+  paint-order: stroke fill;
+  -webkit-text-stroke: 0.012em rgba(23, 23, 23, 0.34);
+}
+
+.social-copy .flavors-word .brand-letter {
+  -webkit-text-stroke-color: rgba(255, 245, 223, 0.34);
+}
+
+.mochi-copy .flavors-word .letter-green {
+  color: var(--teal);
+}
+
+.social-copy .flavors-word .letter-teal {
+  color: var(--green);
+}
+
 .means-word {
   color: var(--cream);
 }
@@ -377,6 +399,12 @@ main:not(.force-motion) .opening-video {
 
 .opening-hours {
   left: clamp(20px, 4.3vw, 74px);
+  line-height: 1.35;
+}
+
+.opening-hours > span {
+  display: block;
+  white-space: nowrap;
 }
 
 .continue-link {
@@ -983,7 +1011,7 @@ main:not(.force-motion) *::after {
   }
 
   .opening-copy {
-    bottom: 116px;
+    bottom: 128px;
     left: 18px;
     max-width: calc(100vw - 36px);
   }
@@ -999,9 +1027,10 @@ main:not(.force-motion) *::after {
   }
 
   .opening-hours {
-    bottom: 72px;
+    bottom: 80px;
     font-size: 16px;
     left: 18px;
+    line-height: 1.2;
   }
 
   .continue-link {
