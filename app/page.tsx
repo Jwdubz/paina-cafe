@@ -24,6 +24,19 @@ function FlavorsWord() {
   );
 }
 
+function ArrowUpRight() {
+  return (
+    <svg
+      className="link-arrow"
+      aria-hidden="true"
+      focusable="false"
+      viewBox="0 0 12 12"
+    >
+      <path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" />
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <main className="force-motion">
@@ -39,13 +52,13 @@ export default function Home() {
             Instagram
           </a>
           <a className="order-link" href={orderUrl} target="_blank" rel="noreferrer">
-            ORDER NOW <span aria-hidden="true">↗</span>
+            ORDER NOW <ArrowUpRight />
           </a>
         </nav>
       </header>
 
       <a className="floating-order" href={orderUrl} target="_blank" rel="noreferrer">
-        ORDER NOW <span aria-hidden="true">↗</span>
+        ORDER NOW <ArrowUpRight />
       </a>
 
       <div className="passage-scroll">
@@ -151,7 +164,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              Catch This Week’s <FlavorsWord /> ↗
+              Catch This Week’s <FlavorsWord /> <ArrowUpRight />
             </a>
           </div>
         </section>
@@ -244,7 +257,7 @@ export default function Home() {
               Already Know When The Weekly <FlavorsWord /> Drop.
             </h2>
             <a href={instagramUrl} target="_blank" rel="noreferrer">
-              Follow Us For Specials ↗
+              Follow Us For Specials <ArrowUpRight />
             </a>
           </div>
         </section>
@@ -268,7 +281,7 @@ export default function Home() {
             >
               <span>Blue Diamond</span>
               <strong>4965 Blue Diamond Rd · Ste 125</strong>
-              <small>(702) 268-7138 · Directions ↗</small>
+              <small>(702) 268-7138 · Directions <ArrowUpRight /></small>
             </a>
 
             <a
@@ -279,17 +292,21 @@ export default function Home() {
             >
               <span>Spring Mountain</span>
               <strong>Korea Town Plaza · 6870 Spring Mountain Rd</strong>
-              <small>(702) 272-2790 · Directions ↗</small>
+              <small>(702) 272-2790 · Directions <ArrowUpRight /></small>
             </a>
           </div>
 
           <div className="locations-foot">
             <a className="final-order" href={orderUrl} target="_blank" rel="noreferrer">
-              Order What You Saw <span aria-hidden="true">↗</span>
+              Order What You Saw <ArrowUpRight />
             </a>
             <div className="social-links">
-              <a href={instagramUrl} target="_blank" rel="noreferrer">Instagram ↗</a>
-              <a href={tiktokUrl} target="_blank" rel="noreferrer">TikTok ↗</a>
+              <a href={instagramUrl} target="_blank" rel="noreferrer">
+                Instagram <ArrowUpRight />
+              </a>
+              <a href={tiktokUrl} target="_blank" rel="noreferrer">
+                TikTok <ArrowUpRight />
+              </a>
             </div>
           </div>
         </section>

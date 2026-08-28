@@ -32,8 +32,10 @@ body {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Bricolage Grotesque', sans-serif;
   font-size: 16px;
+  font-optical-sizing: none;
+  font-synthesis: none;
   overflow: hidden;
 }
 
@@ -141,17 +143,17 @@ video {
   align-items: center;
   display: flex;
   font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-optical-sizing: none;
   font-stretch: 100%;
   font-synthesis: none;
   font-variation-settings:
-    'opsz' 16,
+    'opsz' 18,
     'wdth' 100,
     'wght' 680;
   font-weight: 680;
   gap: clamp(20px, 2.2vw, 34px);
-  letter-spacing: 0.012em;
+  letter-spacing: 0.005em;
 }
 
 .site-header nav > a:not(.order-link) {
@@ -197,12 +199,12 @@ html[data-active-scene='locations'] .site-header nav > a:not(.order-link) {
   font-stretch: 100%;
   font-synthesis: none;
   font-variation-settings:
-    'opsz' 16,
+    'opsz' 18,
     'wdth' 100,
-    'wght' 720;
+    'wght' 680;
   font-size: 18px;
-  font-weight: 720;
-  letter-spacing: 0.012em;
+  font-weight: 680;
+  letter-spacing: 0.005em;
   padding: 18px 30px;
   text-shadow: none;
   transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
@@ -210,8 +212,24 @@ html[data-active-scene='locations'] .site-header nav > a:not(.order-link) {
 }
 
 .order-link > span,
-.floating-order > span {
+.floating-order > span,
+.order-link > .link-arrow,
+.floating-order > .link-arrow {
   color: var(--teal);
+}
+
+.link-arrow {
+  display: inline-block;
+  fill: none;
+  height: 0.72em;
+  margin-left: 0.12em;
+  overflow: visible;
+  stroke: currentColor;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: 1.65;
+  vertical-align: 0.02em;
+  width: 0.72em;
 }
 
 .order-link:hover,
@@ -298,15 +316,28 @@ main:not(.force-motion) .opening-video {
 .scene-copy h2,
 .social-number,
 .locations-heading h2 {
-  font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 900;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-optical-sizing: none;
+  font-synthesis: none;
+  font-weight: 760;
 }
 
 .opening-copy h1 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-kerning: normal;
+  font-optical-sizing: none;
+  font-stretch: 96%;
+  font-synthesis: none;
+  font-variation-settings:
+    'opsz' 96,
+    'wdth' 96,
+    'wght' 760;
   font-size: clamp(68px, 9.8vw, 164px);
-  letter-spacing: -0.075em;
-  line-height: 0.78;
+  font-weight: 760;
+  letter-spacing: -0.018em;
+  line-height: 0.84;
   margin: 0;
+  text-wrap: balance;
 }
 
 .opening-copy h1 > span,
@@ -316,6 +347,11 @@ main:not(.force-motion) .opening-video {
 
 .opening-copy h1 > strong {
   font: inherit;
+}
+
+.opening-line > .brand-name,
+.opening-line > .means-word {
+  display: block;
 }
 
 .brand-letter {
@@ -377,8 +413,17 @@ main:not(.force-motion) .opening-video {
 }
 
 .opening-copy > p {
+  font-family: 'Bricolage Grotesque', sans-serif;
   font-size: clamp(20px, 1.7vw, 28px);
-  font-weight: 800;
+  font-optical-sizing: none;
+  font-stretch: 100%;
+  font-synthesis: none;
+  font-variation-settings:
+    'opsz' 28,
+    'wdth' 100,
+    'wght' 680;
+  font-weight: 680;
+  letter-spacing: 0.005em;
   line-height: 1.25;
   margin: 28px 0 0;
 }
@@ -390,8 +435,17 @@ main:not(.force-motion) .opening-video {
 .opening-hours,
 .continue-link {
   bottom: 28px;
+  font-family: 'Bricolage Grotesque', sans-serif;
   font-size: 16px;
-  font-weight: 800;
+  font-optical-sizing: none;
+  font-stretch: 100%;
+  font-synthesis: none;
+  font-variation-settings:
+    'opsz' 16,
+    'wdth' 100,
+    'wght' 620;
+  font-weight: 620;
+  letter-spacing: 0.005em;
   margin: 0;
   position: absolute;
   z-index: 5;
@@ -409,6 +463,11 @@ main:not(.force-motion) .opening-video {
 
 .continue-link {
   border-bottom: 2px solid currentColor;
+  font-variation-settings:
+    'opsz' 16,
+    'wdth' 100,
+    'wght' 680;
+  font-weight: 680;
   padding-bottom: 5px;
   right: clamp(20px, 3.2vw, 54px);
 }
@@ -977,12 +1036,19 @@ main:not(.force-motion) *::after {
     background: var(--teal);
     border-color: var(--aqua);
     color: var(--cream);
+    font-variation-settings:
+      'opsz' 17,
+      'wdth' 100,
+      'wght' 680;
     font-size: 17px;
+    font-weight: 680;
     padding: 15px 25px;
   }
 
   .site-header nav .order-link > span,
-  .floating-order > span {
+  .floating-order > span,
+  .site-header nav .order-link > .link-arrow,
+  .floating-order > .link-arrow {
     color: var(--cream);
   }
 
@@ -1018,7 +1084,13 @@ main:not(.force-motion) *::after {
 
   .opening-copy h1 {
     font-size: clamp(58px, 18vw, 82px);
-    line-height: .8;
+    font-variation-settings:
+      'opsz' 80,
+      'wdth' 96,
+      'wght' 740;
+    font-weight: 740;
+    letter-spacing: -0.012em;
+    line-height: .88;
   }
 
   .opening-copy > p {
