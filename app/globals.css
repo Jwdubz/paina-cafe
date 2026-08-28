@@ -188,10 +188,10 @@ html[data-active-scene='locations'] .site-header nav > a:not(.order-link) {
 
 .order-link,
 .floating-order {
-  background: var(--teal);
-  border: 2px solid var(--aqua);
+  background: var(--yellow);
+  border: 2px solid var(--orange);
   border-radius: 999px;
-  color: var(--cream);
+  color: var(--ink);
   font-family: 'Bricolage Grotesque', sans-serif;
   font-optical-sizing: none;
   font-stretch: 100%;
@@ -207,6 +207,11 @@ html[data-active-scene='locations'] .site-header nav > a:not(.order-link) {
   text-shadow: none;
   transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
   transform: translate3d(0, 0, 0);
+}
+
+.order-link > span,
+.floating-order > span {
+  color: var(--teal);
 }
 
 .order-link:hover,
@@ -709,6 +714,7 @@ main:not(.force-motion) .opening-video {
 }
 
 .social-copy > a {
+  color: var(--yellow);
   font-family: 'Bricolage Grotesque', sans-serif;
   font-optical-sizing: none;
   font-synthesis: none;
@@ -940,8 +946,16 @@ main:not(.force-motion) *::after {
 
   .site-header nav .order-link,
   .floating-order {
+    background: var(--teal);
+    border-color: var(--aqua);
+    color: var(--cream);
     font-size: 17px;
     padding: 15px 25px;
+  }
+
+  .site-header nav .order-link > span,
+  .floating-order > span {
+    color: var(--cream);
   }
 
   .floating-order {
