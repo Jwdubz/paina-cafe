@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "account": "@painacafelv",
+  "assembled_at_utc": "2026-08-27T19:22:24Z",
+  "rights_status": "unverified_for_publication",
+  "rights_notice": "Public Instagram visibility is not publication permission. Clear footage, music, performer, creator, trademark, and commercial-use rights before public deployment.",
+  "verification": {
+    "source_files": "hash, ffprobe, representative frame inspection, and full ffmpeg decode",
+    "site_derivatives": "hash, ffprobe, poster inspection, contact-sheet inspection, and full ffmpeg video decode",
+    "result": "passed"
+  },
+  "sources": [
+    {
+      "shortcode": "DcJ_7R_yJ2N",
+      "subject": "mochi mixing, extrusion, and frying",
+      "stable_post_url": "https://www.instagram.com/painacafelv/reel/DcJ_7R_yJ2N/",
+      "source_width": 720,
+      "source_height": 1280,
+      "source_duration_seconds": 45.322494,
+      "source_sha256": "0cbecd7bae26740008335eca8cf466a18d5891f6e6b30c044d4715b9162d9012"
+    },
+    {
+      "shortcode": "Davhdt5tCEd",
+      "subject": "Hawaiian poke-bowl assembly",
+      "stable_post_url": "https://www.instagram.com/painacafelv/reel/Davhdt5tCEd/",
+      "source_width": 720,
+      "source_height": 1280,
+      "source_duration_seconds": 13.325397,
+      "source_sha256": "cca7a3aa5e228a447a35212a72d58ebf362a014ee546dabdf7584e906ffd01fc"
+    },
+    {
+      "shortcode": "DY-Uk6XP9nn",
+      "subject": "spicy inari platter finishing",
+      "stable_post_url": "https://www.instagram.com/painacafelv/reel/DY-Uk6XP9nn/",
+      "source_width": 720,
+      "source_height": 1280,
+      "source_duration_seconds": 23.333197,
+      "source_sha256": "638ead75ded9425a08b04ee5bfd94f6706d053ee7983ce8c7913aa0e15ebf132"
+    },
+    {
+      "shortcode": "DcUln30hg6e",
+      "subject": "prepared-food case and branded takeout handoff",
+      "stable_post_url": "https://www.instagram.com/painacafelv/reel/DcUln30hg6e/",
+      "source_width": 720,
+      "source_height": 1280,
+      "source_duration_seconds": 21.336281,
+      "source_sha256": "aa4c04de96e5078f693afb5d923f42bc0351b1ed5e704628d7ad1311e1f2c47a"
+    }
+  ],
+  "derivatives": [
+    {
+      "site_path": "public/media/video/mochi-loop.mp4",
+      "source_shortcodes": ["DcJ_7R_yJ2N"],
+      "edit": "source seconds 0.0-18.0, 1.5x speed, audio removed",
+      "width": 720,
+      "height": 1280,
+      "duration_seconds": 12.066667,
+      "bytes": 5057759,
+      "sha256": "9599bf29b68d4256a69f5d8b8e9d36224e83d1ae04a707443521de2fb58ff436"
+    },
+    {
+      "site_path": "public/media/video/hawaiian-poke-loop.mp4",
+      "source_shortcodes": ["Davhdt5tCEd"],
+      "edit": "source seconds 4.6-13.2, clean post-title passage, audio removed",
+      "width": 720,
+      "height": 1280,
+      "duration_seconds": 8.6,
+      "bytes": 2978868,
+      "sha256": "9d00f27dd6e2ebadd122e98a4079a5290d99e23461cdcc22cb77d40e59eee0fd"
+    },
+    {
+      "site_path": "public/media/video/inari-loop.mp4",
+      "source_shortcodes": ["DY-Uk6XP9nn"],
+      "edit": "source seconds 7.6-23.1, clean post-title passage, 1.25x speed, audio removed",
+      "width": 720,
+      "height": 1280,
+      "duration_seconds": 12.466667,
+      "bytes": 4007524,
+      "sha256": "692968a88052ef61f277df575da5fd807288d4447c98f8bbc787126d8fc6066f"
+    },
+    {
+      "site_path": "public/media/video/daily-loop.mp4",
+      "source_shortcodes": ["DcUln30hg6e"],
+      "edit": "source seconds 6.8-21.1, clean post-title passage, 1.2x speed, audio removed",
+      "width": 720,
+      "height": 1280,
+      "duration_seconds": 11.966667,
+      "bytes": 4650836,
+      "sha256": "ba18330d7d55757001dcf222f981db1d5e14982c8dba870c0b905fb05ac39ea6"
+    },
+    {
+      "site_path": "public/media/video/opening-desktop.mp4",
+      "source_shortcodes": ["DcJ_7R_yJ2N", "Davhdt5tCEd", "DcUln30hg6e"],
+      "edit": "three simultaneous portrait columns, each cropped by 2.5 percent vertically into a 1920x1080 frame, audio removed",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 8.5,
+      "bytes": 7617962,
+      "sha256": "ed99a05d492e5547b6a8c6b031f8560967cf1a84216e341642e4a73b470030dd"
+    },
+    {
+      "site_path": "public/media/video/opening-mobile.mp4",
+      "source_shortcodes": ["DcJ_7R_yJ2N", "Davhdt5tCEd", "DY-Uk6XP9nn", "DcUln30hg6e"],
+      "edit": "four clean 2.4-second portrait passages concatenated at native aspect ratio, audio removed",
+      "width": 720,
+      "height": 1280,
+      "duration_seconds": 9.6,
+      "bytes": 3167661,
+      "sha256": "4378c6c98d1ed2161dcb5c6f222d9bdf551f9ddfc4de54913c0a354cb4769535"
+    }
+  ],
+  "posters": [
+    {
+      "site_path": "public/media/video/mochi-loop-poster.jpg",
+      "bytes": 56105,
+      "sha256": "471ff1cdffb82d7dec96dfedd825b4778e6c6b15c32b8ef241d174f3a6b19b0c"
+    },
+    {
+      "site_path": "public/media/video/hawaiian-poke-loop-poster.jpg",
+      "bytes": 77785,
+      "sha256": "5aaa1dc022151706098e27644fdca3c3b874aa94cd22b3e3780a25e252fe4dec"
+    },
+    {
+      "site_path": "public/media/video/inari-loop-poster.jpg",
+      "bytes": 122126,
+      "sha256": "7a456c669292901e5c45288887556ff61047857b247c614d9d74181bddc43d2a"
+    },
+    {
+      "site_path": "public/media/video/daily-loop-poster.jpg",
+      "bytes": 88287,
+      "sha256": "fba412846f55cbc94725718cc1f980cd92813f08b78cb09a22740d31850be62f"
+    },
+    {
+      "site_path": "public/media/video/opening-desktop-poster.jpg",
+      "bytes": 222697,
+      "sha256": "c3bcae6ab8b434029520d944738d7a79be0b3e21b4806ecd3593153f6da21700"
+    },
+    {
+      "site_path": "public/media/video/opening-mobile-poster.jpg",
+      "bytes": 68982,
+      "sha256": "8b3c1b6cc71f7aa9de1f62e0f0ef64e536e8f316371dee8ebd4f802eb460e110"
+    }
+  ]
+}
