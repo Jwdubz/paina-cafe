@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 const siteBase = new URL(
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://paina.jarrettwroten.com',
 );
 
 export const metadata: Metadata = {
@@ -12,15 +12,19 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Paina Cafe | Paina Means Gathering',
     description: 'Fresh poke, hot Hawaiian plates, and mochi donuts at two Las Vegas locations.',
     type: 'website',
+    url: '/',
     images: [
       {
-        url: '/og.png',
-        width: 1733,
-        height: 907,
+        url: '/paina-social-card.png',
+        width: 1200,
+        height: 630,
         alt: 'Paina means gathering. Paina Cafe, Las Vegas.',
       },
     ],
@@ -29,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Paina Cafe | Paina Means Gathering',
     description: 'Fresh poke, hot Hawaiian plates, and mochi donuts at two Las Vegas locations.',
-    images: ['/og.png'],
+    images: ['/paina-social-card.png'],
   },
 };
 
