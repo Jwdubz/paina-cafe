@@ -16,7 +16,7 @@ This build is a private local concept. Public visibility on Instagram does not e
 - Spicy inari platter finishing: https://www.instagram.com/painacafelv/reel/DY-Uk6XP9nn/
 - In-store prepared-food case and branded takeout handoff: https://www.instagram.com/painacafelv/reel/DcUln30hg6e/
 
-The site ships locally derived, silent H.264 loops under `public/media/video/`. The clean portions of each reel were trimmed, audio was removed, and the clips were re-encoded for muted inline playback. `opening-desktop.mp4` is a simultaneous three-column motion composition built from the mochi, poke, and in-store footage. `opening-mobile.mp4` is a portrait sequence that moves through mochi, poke, inari, and takeout. Posters are source-derived frames from the same exact clips.
+The site ships locally derived, silent H.264 loops under `public/media/video/`. The clean portions of each reel were trimmed, audio was removed, and the clips were re-encoded for muted inline playback. The active `mochi-loop-full-batch-v2.mp4` covers source seconds 0.0–30.6 at 1.5×, including the complete continuous 23-donut extrusion batch and the finished-fryer reveal before the source's next hard edit. Its versioned filename prevents the former 12-second Mochi asset from remaining in browser or edge caches; the former `mochi-loop.mp4` remains unreferenced for provenance. `opening-desktop.mp4` is a simultaneous three-column motion composition built from the mochi, poke, and in-store footage. `opening-mobile.mp4` is a portrait sequence that moves through mochi, poke, inari, and takeout. Posters are source-derived frames from the same exact clips.
 
 Exact source hashes, site-derivative hashes, dimensions, durations, edit ranges, and full-decode status are preserved in `sources/video-provenance.json`.
 
@@ -33,6 +33,7 @@ Exact source hashes, site-derivative hashes, dimensions, durations, edit ranges,
 - `public/media/logo.png` — current Paina Cafe / DoorDash-hosted logo from https://doordash-static.s3-us-west-2.amazonaws.com/media/restaurant/cover/PainaCafe_6870_Las_Vegas_NV.png
 - `public/media/logo-transparent.png` — exact 440×230 derivative of the same logo. Exterior near-white pixels were removed while the enclosed white fish, bowl, wave, and leaf artwork was retained; no generative redraw is used by the site.
 - `public/og.png` — original abstract social-preview artwork generated for this concept. It contains no documentary depiction of Paina’s food, people, or locations.
+- `public/paina-social-card-v2.png` — deterministic 1200×630 social-preview composition built from the finished inari frame at 11.6 seconds in `inari-loop.mp4`, the exact transparent logo derivative above, and the bundled Bricolage Grotesque face. It contains no generatively redrawn food or logo. SHA-256: `3995374124B5A186E0F55D8693E29D1EF9E73E39A768545A1D54DE69FD9A8F3B`.
 - `public/favicon.ico` — a 64-pixel padded derivative of the same official logo.
 
 ## Dated facts and decisions

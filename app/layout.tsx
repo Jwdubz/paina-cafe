@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     url: '/',
     images: [
       {
-        url: '/paina-social-card.png',
+        url: '/paina-social-card-v2.png',
         width: 1200,
         height: 630,
-        alt: 'Paina means gathering. Paina Cafe, Las Vegas.',
+        alt: 'Paina Cafe in Las Vegas. Come hungry.',
       },
     ],
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Paina Cafe | Paina Means Gathering',
     description: 'Fresh poke, hot Hawaiian plates, and mochi donuts at two Las Vegas locations.',
-    images: ['/paina-social-card.png'],
+    images: ['/paina-social-card-v2.png'],
   },
 };
 

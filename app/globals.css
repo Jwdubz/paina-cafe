@@ -308,15 +308,36 @@ html[data-active-scene='locations'] .site-header nav > a:not(.order-link) {
   pointer-events: auto;
   position: absolute;
   right: auto;
+  text-align: center;
   transform: translateX(-50%);
   transition: background 180ms ease, opacity 180ms ease, transform 180ms ease;
   white-space: nowrap;
+  width: min(252px, calc(100vw - 48px));
   z-index: 60;
 }
 
 .floating-order:hover,
 .floating-order:focus-visible {
   transform: translateX(-50%) translateY(-2px);
+}
+
+@media (min-width: 761px) {
+  html[data-active-scene='locations'] .floating-order {
+    background: var(--teal);
+    border-color: var(--aqua);
+    color: var(--cream);
+  }
+
+  html[data-active-scene='locations'] .floating-order > .link-arrow {
+    color: var(--cream);
+  }
+
+  html[data-active-scene='locations'] .floating-order:hover,
+  html[data-active-scene='locations'] .floating-order:focus-visible {
+    background: var(--teal);
+    border-color: var(--yellow);
+    color: var(--cream);
+  }
 }
 
 @keyframes paina-aura-orbit {
@@ -1136,6 +1157,7 @@ main:not(.force-motion) *::after {
     pointer-events: auto;
     right: auto;
     transform: translateX(-50%);
+    width: min(228px, calc(100vw - 40px));
   }
 
   .floating-order:hover,
@@ -1418,5 +1440,43 @@ main:not(.force-motion) *::after {
 
   .locations-foot {
     min-height: 72px;
+  }
+}
+
+@media (max-width: 760px) and (max-height: 700px) {
+  .locations-scene {
+    min-height: 560px;
+    padding-top: 86px;
+  }
+
+  .locations-heading {
+    padding: 0 16px 10px;
+  }
+
+  .locations-heading h2 {
+    font-size: 44px;
+  }
+
+  .location-choice {
+    padding: 12px 18px;
+  }
+
+  .location-choice span {
+    font-size: 32px;
+    margin-bottom: 6px;
+  }
+
+  .location-choice strong,
+  .location-choice small {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .location-choice small {
+    margin-top: 4px;
+  }
+
+  .location-spring {
+    padding-bottom: 70px;
   }
 }

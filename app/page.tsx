@@ -150,7 +150,10 @@ export default function Home() {
               preload="none"
               poster="/media/video/mochi-loop-poster.jpg"
             >
-              <source src="/media/video/mochi-loop.mp4" type="video/mp4" />
+              <source
+                src="/media/video/mochi-loop-full-batch-v2.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
           <div className="scene-scrim mochi-scrim" aria-hidden="true" />

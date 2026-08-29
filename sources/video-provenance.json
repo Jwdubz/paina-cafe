@@ -49,9 +49,19 @@
   ],
   "derivatives": [
     {
+      "site_path": "public/media/video/mochi-loop-full-batch-v2.mp4",
+      "source_shortcodes": ["DcJ_7R_yJ2N"],
+      "edit": "source seconds 0.0-30.6 exclusive, complete 23-donut extrusion batch plus finished-fryer reveal, 1.5x speed, audio removed",
+      "width": 720,
+      "height": 1280,
+      "duration_seconds": 20.4,
+      "bytes": 11299866,
+      "sha256": "7f12c52e657cce242790ea7c3ab8ee5f429505e0ed6b85f4b7bf597b77d98627"
+    },
+    {
       "site_path": "public/media/video/mochi-loop.mp4",
       "source_shortcodes": ["DcJ_7R_yJ2N"],
-      "edit": "source seconds 0.0-18.0, 1.5x speed, audio removed",
+      "edit": "legacy source seconds 0.0-18.0, 1.5x speed, audio removed; retained for provenance but no longer referenced by the page",
       "width": 720,
       "height": 1280,
       "duration_seconds": 12.066667,
@@ -139,6 +149,17 @@
       "site_path": "public/media/video/opening-mobile-poster.jpg",
       "bytes": 68982,
       "sha256": "8b3c1b6cc71f7aa9de1f62e0f0ef64e536e8f316371dee8ebd4f802eb460e110"
+    }
+  ],
+  "social_previews": [
+    {
+      "site_path": "public/paina-social-card-v2.png",
+      "source_shortcodes": ["DY-Uk6XP9nn"],
+      "edit": "deterministic 1200x630 composition using inari-loop frame at 11.6 seconds, official transparent logo, and self-hosted Bricolage Grotesque typography",
+      "width": 1200,
+      "height": 630,
+      "bytes": 836750,
+      "sha256": "3995374124b5a186e0f55d8693e29d1ef9e73e39a768545a1d54de69fd9a8f3b"
     }
   ]
 }
