@@ -19,6 +19,12 @@
   --green: #9ed083;
 }
 
+@property --paina-aura-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -190,6 +196,7 @@ html[data-active-scene='locations'] .site-header nav > a:not(.order-link) {
 
 .order-link,
 .floating-order {
+  --paina-aura-angle: 0deg;
   background: var(--yellow);
   border: 2px solid var(--orange);
   border-radius: 999px;
@@ -204,11 +211,61 @@ html[data-active-scene='locations'] .site-header nav > a:not(.order-link) {
     'wght' 680;
   font-size: 18px;
   font-weight: 680;
+  isolation: isolate;
   letter-spacing: 0.005em;
   padding: 18px 30px;
+  position: relative;
   text-shadow: none;
   transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
   transform: translate3d(0, 0, 0);
+  z-index: 0;
+}
+
+.order-link::before,
+.order-link::after,
+.floating-order::before,
+.floating-order::after {
+  animation: paina-aura-orbit 3.6s linear infinite;
+  background: conic-gradient(
+    from var(--paina-aura-angle),
+    transparent 0deg 15deg,
+    rgba(244, 129, 72, 0) 30deg,
+    var(--orange) 90deg,
+    var(--yellow) 150deg,
+    var(--green) 210deg,
+    var(--aqua) 280deg,
+    var(--teal) 340deg,
+    rgba(31, 133, 136, 0) 360deg
+  );
+  border-radius: inherit;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+.order-link::before,
+.floating-order::before {
+  inset: -5px;
+  opacity: 0.96;
+  padding: 2px;
+  z-index: -1;
+}
+
+.order-link::after,
+.floating-order::after {
+  filter: blur(7px);
+  inset: -8px;
+  opacity: 0.44;
+  padding: 4px;
+  z-index: -2;
 }
 
 .order-link > span,
@@ -260,6 +317,27 @@ html[data-active-scene='locations'] .site-header nav > a:not(.order-link) {
 .floating-order:hover,
 .floating-order:focus-visible {
   transform: translateX(-50%) translateY(-2px);
+}
+
+@keyframes paina-aura-orbit {
+  0% {
+    --paina-aura-angle: 0deg;
+  }
+  8% {
+    --paina-aura-angle: 45deg;
+  }
+  42% {
+    --paina-aura-angle: 135deg;
+  }
+  58% {
+    --paina-aura-angle: 225deg;
+  }
+  92% {
+    --paina-aura-angle: 315deg;
+  }
+  100% {
+    --paina-aura-angle: 360deg;
+  }
 }
 
 .opening-media,
