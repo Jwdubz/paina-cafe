@@ -322,6 +322,7 @@ html[data-active-scene='locations'] .site-header nav > a:not(.order-link) {
 }
 
 @media (min-width: 761px) {
+  html[data-active-scene='mochi'] .floating-order,
   html[data-active-scene='plates'] .floating-order,
   html[data-active-scene='locations'] .floating-order {
     background: var(--teal);
@@ -329,11 +330,14 @@ html[data-active-scene='locations'] .site-header nav > a:not(.order-link) {
     color: var(--cream);
   }
 
+  html[data-active-scene='mochi'] .floating-order > .link-arrow,
   html[data-active-scene='plates'] .floating-order > .link-arrow,
   html[data-active-scene='locations'] .floating-order > .link-arrow {
     color: var(--cream);
   }
 
+  html[data-active-scene='mochi'] .floating-order:hover,
+  html[data-active-scene='mochi'] .floating-order:focus-visible,
   html[data-active-scene='plates'] .floating-order:hover,
   html[data-active-scene='plates'] .floating-order:focus-visible,
   html[data-active-scene='locations'] .floating-order:hover,
