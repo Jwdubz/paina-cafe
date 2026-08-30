@@ -158,11 +158,11 @@
         "https://doordash-static.s3-us-west-2.amazonaws.com/media/photosV2/ed2a4739-c2e1-4a53-bb0c-19f3a47c20c5-retina-large.png",
         "https://doordash-static.s3-us-west-2.amazonaws.com/media/store/header/cb8d4c56-9bfa-4a15-b17c-9e787fba0307.jpg"
       ],
-      "edit": "deterministic 1200x630 diagonal composition reading Mochi. Poke. Pā‘ina., with the unobstructed finished-mochi crop on the left and the overhead bowl spread carrying the official transparent logo and quote on the right",
+      "edit": "deterministic 1200x630 diagonal composition reading Mochi. Poke. Pā‘ina. on one line, with Pā‘ina. colored from the logo palette, the unobstructed finished-mochi crop on the left, and the overhead bowl spread carrying the official transparent logo and quote on the right",
       "width": 1200,
       "height": 630,
-      "bytes": 1241351,
-      "sha256": "30fdbebd6ae463d49c215976f8da0dec1aced1a66001d42a027d7c007f60d152"
+      "bytes": 1263323,
+      "sha256": "1348f94bb7b7151ea97069e33681ed414ee751cbe23145749793376c55b9bedb"
     }
   ]
 }
