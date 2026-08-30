@@ -154,12 +154,15 @@
   "social_previews": [
     {
       "site_path": "public/paina-social-card-v2.png",
-      "source_shortcodes": ["DY-Uk6XP9nn"],
-      "edit": "deterministic 1200x630 composition using inari-loop frame at 11.6 seconds, official transparent logo, and self-hosted Bricolage Grotesque typography",
+      "source_urls": [
+        "https://doordash-static.s3-us-west-2.amazonaws.com/media/photosV2/ed2a4739-c2e1-4a53-bb0c-19f3a47c20c5-retina-large.png",
+        "https://doordash-static.s3-us-west-2.amazonaws.com/media/store/header/cb8d4c56-9bfa-4a15-b17c-9e787fba0307.jpg"
+      ],
+      "edit": "deterministic 1200x630 diagonal composition reading Mochi. Poke. Pā‘ina., using Paina's finished mochi plate on the left, overhead bowl spread on the right, official transparent logo, and self-hosted Bricolage Grotesque typography",
       "width": 1200,
       "height": 630,
-      "bytes": 836750,
-      "sha256": "3995374124b5a186e0f55d8693e29d1ef9e73e39a768545a1d54de69fd9a8f3b"
+      "bytes": 1053335,
+      "sha256": "387e89029eed8477cbf92fa8dab686188ec95cd2da44b78e5a61cd324e77711f"
     }
   ]
 }

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: '/paina-social-card-v2.png',
         width: 1200,
         height: 630,
-        alt: 'Paina Cafe in Las Vegas. Come hungry.',
+        alt: 'Paina Cafe mochi donuts and Hawaiian bowls. Mochi. Poke. Pā‘ina.',
       },
     ],
   },
