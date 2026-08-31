@@ -1221,7 +1221,7 @@ main:not(.force-motion) *::after {
     left: 18px;
     max-width: calc(100vw - 36px);
     top: auto;
-    bottom: 108px;
+    bottom: 156px;
     transform: none;
   }
 
@@ -1360,7 +1360,7 @@ main:not(.force-motion) *::after {
   }
 
   .social-copy {
-    bottom: 102px;
+    bottom: 156px;
     left: 18px;
     max-width: calc(100vw - 36px);
     top: auto;
@@ -1418,6 +1418,10 @@ main:not(.force-motion) *::after {
   .location-choice strong,
   .location-choice small {
     font-size: 16px;
+  }
+
+  .location-spring {
+    padding-bottom: 96px;
   }
 
   .locations-foot {
