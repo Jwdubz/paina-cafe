@@ -4,7 +4,7 @@ import './globals.css';
 const siteBase = new URL(
   process.env.NEXT_PUBLIC_SITE_URL ?? 'https://paina.jarrettwroten.com',
 );
-const socialCardPath = '/paina-social-card-1afcd1d5.png';
+const socialCardPath = '/paina-social-card-d8220e41.png';
 const socialCardUrl = new URL(socialCardPath, siteBase).toString();
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: socialCardPath,
         width: 1200,
         height: 630,
-        alt: 'Paina Cafe mochi donuts and Hawaiian bowls. Mochi. Poke. Pā‘ina.',
+        alt: 'Paina Cafe mochi donuts and Hawaiian bowls. Mochi Poke Pā‘ina.',
       },
     ],
   },
