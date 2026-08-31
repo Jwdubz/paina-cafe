@@ -153,8 +153,9 @@
   ],
   "social_previews": [
     {
-      "site_path": "public/paina-social-card-a0b27d26.png",
+      "site_path": "public/paina-social-card-e601be1e.png",
       "legacy_aliases": [
+        "public/paina-social-card-a0b27d26.png",
         "public/paina-social-card-113effa5.png",
         "public/paina-social-card-748720b7.png",
         "public/paina-social-card-v2.png",
@@ -165,11 +166,11 @@
         "https://doordash-static.s3-us-west-2.amazonaws.com/media/photosV2/ed2a4739-c2e1-4a53-bb0c-19f3a47c20c5-retina-large.png",
         "https://doordash-static.s3-us-west-2.amazonaws.com/media/store/header/cb8d4c56-9bfa-4a15-b17c-9e787fba0307.jpg"
       ],
-      "edit": "deterministic 1200x630 diagonal composition with the oversized contiguous Mochi.Poke.Pā‘ina. strike spanning the lower frame edge-to-edge, Mochi set in the owner-supplied Pā‘ina purple swatch #A898CF, Pā‘ina. colored from the logo palette, the finished-mochi crop on the left, and the overhead bowl spread plus official transparent logo on the right",
+      "edit": "deterministic 1200x630 diagonal composition with the oversized contiguous Mochi.Poke.Pā‘ina. strike spanning the lower frame edge-to-edge, Mochi set in the owner-supplied Pā‘ina purple swatch #A898CF, Poke set in the official light green #9ED083, the following period repeated in Mochi purple, Pā‘ina. colored from the logo palette, the finished-mochi crop on the left, and the overhead bowl spread plus official transparent logo on the right",
       "width": 1200,
       "height": 630,
-      "bytes": 1029814,
-      "sha256": "a0b27d26d42df725f9629818dc181adac7af991b10aeee6c7aecbbd6245ba952"
+      "bytes": 1029737,
+      "sha256": "e601be1e50d25f41a2a4d39dc965a140e4bb850ac7fb770f90c3fdcd3e815910"
     }
   ]
 }
