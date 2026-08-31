@@ -4,6 +4,8 @@ import './globals.css';
 const siteBase = new URL(
   process.env.NEXT_PUBLIC_SITE_URL ?? 'https://paina.jarrettwroten.com',
 );
+const socialCardPath = '/paina-social-card-748720b7.png';
+const socialCardUrl = new URL(socialCardPath, siteBase).toString();
 
 export const metadata: Metadata = {
   metadataBase: siteBase,
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
     url: '/',
     images: [
       {
-        url: '/paina-social-card-v2.png',
+        url: socialCardPath,
         width: 1200,
         height: 630,
         alt: 'Paina Cafe mochi donuts and Hawaiian bowls. Mochi. Poke. Pā‘ina.',
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Paina Cafe | Paina Means Gathering',
     description: 'Fresh poke, hot Hawaiian plates, and mochi donuts at two Las Vegas locations.',
-    images: ['/paina-social-card-v2.png'],
+    images: [socialCardPath],
   },
 };
 
@@ -45,6 +47,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="image_src" href={socialCardUrl} />
+        <meta name="thumbnail" content={socialCardUrl} />
         <link
           rel="preload"
           href="/fonts/bricolage-grotesque-variable.woff2"

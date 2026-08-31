@@ -153,7 +153,12 @@
   ],
   "social_previews": [
     {
-      "site_path": "public/paina-social-card-v2.png",
+      "site_path": "public/paina-social-card-748720b7.png",
+      "legacy_aliases": [
+        "public/paina-social-card-v2.png",
+        "public/paina-social-card.png",
+        "public/og.png"
+      ],
       "source_urls": [
         "https://doordash-static.s3-us-west-2.amazonaws.com/media/photosV2/ed2a4739-c2e1-4a53-bb0c-19f3a47c20c5-retina-large.png",
         "https://doordash-static.s3-us-west-2.amazonaws.com/media/store/header/cb8d4c56-9bfa-4a15-b17c-9e787fba0307.jpg"
