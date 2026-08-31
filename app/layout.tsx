@@ -4,7 +4,7 @@ import './globals.css';
 const siteBase = new URL(
   process.env.NEXT_PUBLIC_SITE_URL ?? 'https://paina.jarrettwroten.com',
 );
-const socialCardPath = '/paina-social-card-e601be1e.png';
+const socialCardPath = '/paina-social-card-1afcd1d5.png';
 const socialCardUrl = new URL(socialCardPath, siteBase).toString();
 
 export const metadata: Metadata = {
