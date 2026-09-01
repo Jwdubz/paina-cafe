@@ -11,6 +11,14 @@ export const metadata: Metadata = {
   metadataBase: siteBase,
   title: 'Paina Cafe | Hawaiian Food in Las Vegas',
   description: 'Gather around fresh poke, hot Hawaiian plates, and Paina Cafe mochi donuts at two Las Vegas locations.',
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: {
+      index: false,
+      follow: true,
+    },
+  },
   icons: {
     icon: '/favicon.ico',
   },
