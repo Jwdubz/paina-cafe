@@ -18,9 +18,8 @@ export function PassageController() {
 
     if (!scroller || !main || scenes.length === 0) return;
 
-    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
     const motionOverride = new URLSearchParams(window.location.search).get('motion');
-    let reduced = motionOverride === 'reduced' || motionPreference.matches;
+    const reduced = motionOverride === 'reduced';
     main.classList.toggle('force-motion', !reduced);
 
     const visibility = new Map<HTMLElement, number>(
@@ -221,16 +220,6 @@ export function PassageController() {
       });
     };
 
-    const handleMotionPreference = () => {
-      const nextReduced = motionOverride === 'reduced' || motionPreference.matches;
-      if (nextReduced === reduced) return;
-
-      reduced = nextReduced;
-      main.classList.toggle('force-motion', !reduced);
-      if (reduced && scrollAnimationFrame !== undefined) releaseTransition();
-      sync();
-    };
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -250,7 +239,6 @@ export function PassageController() {
     scenes.forEach((scene) => observer.observe(scene));
     const handleVisibility = () => sync();
     document.addEventListener('visibilitychange', handleVisibility);
-    motionPreference.addEventListener('change', handleMotionPreference);
     scroller.addEventListener('wheel', handleWheel, { passive: false });
     scroller.addEventListener('touchstart', handleTouchStart, { passive: true });
     scroller.addEventListener('touchmove', handleTouchMove, { passive: false });
@@ -262,7 +250,6 @@ export function PassageController() {
     return () => {
       observer.disconnect();
       document.removeEventListener('visibilitychange', handleVisibility);
-      motionPreference.removeEventListener('change', handleMotionPreference);
       scroller.removeEventListener('wheel', handleWheel);
       scroller.removeEventListener('touchstart', handleTouchStart);
       scroller.removeEventListener('touchmove', handleTouchMove);

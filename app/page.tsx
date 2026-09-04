@@ -39,7 +39,7 @@ function ArrowUpRight() {
 
 export default function Home() {
   return (
-    <main>
+    <main className="force-motion">
       <PassageController />
 
       <header className="site-header">
