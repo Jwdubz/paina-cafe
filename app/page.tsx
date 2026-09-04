@@ -8,7 +8,7 @@ const tiktokUrl = 'https://www.tiktok.com/@painacafelv';
 const blueDiamondDirections =
   'https://www.google.com/maps/search/?api=1&query=4965+Blue+Diamond+Rd+Ste+125+Las+Vegas+NV+89139';
 const springMountainDirections =
-  'https://www.google.com/maps/search/?api=1&query=6870+Spring+Mountain+Rd+Las+Vegas+NV+89146';
+  'https://www.google.com/maps/search/?api=1&query=6870+Spring+Mountain+Rd+Ste+6+Las+Vegas+NV+89146';
 
 function FlavorsWord() {
   return (
@@ -39,7 +39,7 @@ function ArrowUpRight() {
 
 export default function Home() {
   return (
-    <main className="force-motion">
+    <main>
       <PassageController />
 
       <header className="site-header">
@@ -72,7 +72,6 @@ export default function Home() {
             <video
               className="opening-video"
               data-managed-video
-              autoPlay
               muted
               loop
               playsInline
@@ -294,7 +293,7 @@ export default function Home() {
               rel="noreferrer"
             >
               <span>Spring Mountain</span>
-              <strong>Korea Town Plaza · 6870 Spring Mountain Rd</strong>
+              <strong>Korea Town Plaza · 6870 Spring Mountain Rd · Ste 6</strong>
               <small>(702) 272-2790 · Directions <ArrowUpRight /></small>
             </a>
           </div>

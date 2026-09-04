@@ -41,7 +41,7 @@ Exact source hashes, site-derivative hashes, dimensions, durations, edit ranges,
 - `158K` is the follower count visibly reported by the official `@painacafelv` profile on August 27, 2026. The page date-stamps the figure rather than presenting it as timeless.
 - The official profile currently says “Donuts start 8am / Full Menu 10am-7pm.” The page does not claim a day-of-week schedule.
 - Blue Diamond uses the Instagram-listed suite 125: 4965 Blue Diamond Rd, Ste 125, Las Vegas, NV 89139.
-- Spring Mountain’s public unit identifiers conflict (`Ste 6` on current Instagram, `#G` on an older official page). The page deliberately uses “Korea Town Plaza” and the base street address until the unit is confirmed.
+- Spring Mountain’s public unit identifiers conflict: the current `@painacafelv` Instagram profile still listed `Ste 6` when re-checked on September 4, 2026, while an older official page listed `#G` and the current brand site omits a unit. The page follows the restaurant’s current Instagram listing and treats the older `#G` reference as stale.
 - The current site’s anonymous review snippets and stale Honolulu-linked footer destinations were not reused.
 
 ## Publication gate

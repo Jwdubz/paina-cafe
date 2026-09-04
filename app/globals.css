@@ -653,7 +653,7 @@ main:not(.force-motion) .opening-video {
 }
 
 .mochi-copy h2 {
-  font-size: clamp(68px, 8.2vw, 156px);
+  font-size: clamp(68px, 8vw, 152px);
   font-stretch: 84%;
   font-variation-settings:
     'opsz' 96,
@@ -871,7 +871,7 @@ main:not(.force-motion) .opening-video {
 
 .social-copy h2 {
   font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: clamp(32px, 4.4vw, 72px);
+  font-size: clamp(32px, 4.2vw, 70px);
   font-optical-sizing: none;
   font-stretch: 98%;
   font-synthesis: none;
@@ -1117,6 +1117,21 @@ main:not(.force-motion) *::after {
   animation-duration: 1ms !important;
   animation-iteration-count: 1 !important;
   scroll-behavior: auto !important;
+  transition-delay: 0s !important;
+  transition-duration: 1ms !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main *,
+  main *::before,
+  main *::after {
+    animation-delay: 0s !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 1ms !important;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1262,6 +1277,7 @@ main:not(.force-motion) *::after {
   .social-copy > a {
     font-size: 17px;
     margin-top: 22px;
+    min-height: 44px;
   }
 
   .mochi-media {
