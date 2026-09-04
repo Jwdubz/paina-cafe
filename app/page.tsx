@@ -166,7 +166,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              Catch This Week’s <FlavorsWord /> <ArrowUpRight />
+              See Mochi <FlavorsWord /> <ArrowUpRight />
             </a>
           </div>
         </section>
