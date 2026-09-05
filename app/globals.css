@@ -18,9 +18,6 @@
   --orange: #f48148;
   --yellow: #fbbd4e;
   --green: #9ed083;
-  --contrast-outline: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000,
-    0 -1px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000,
-    1px -1px 0 #000, -1px 1px 0 #000;
 }
 
 @property --paina-aura-angle {
@@ -212,7 +209,7 @@ video {
 }
 
 .site-header nav > a:not(.order-link) {
-  text-shadow: var(--contrast-outline), 0 2px 20px rgba(0, 0, 0, 0.92);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.92);
 }
 
 html[data-active-scene='locations'] .site-header nav > a:not(.order-link) {
@@ -461,7 +458,6 @@ main:not(.force-motion) .opening-video {
 }
 
 .opening-copy {
-  text-shadow: var(--contrast-outline);
   bottom: clamp(88px, 12vh, 132px);
   left: clamp(20px, 4.3vw, 74px);
   max-width: min(980px, 88vw);
@@ -609,7 +605,6 @@ main:not(.force-motion) .opening-video {
 }
 
 .opening-hours {
-  text-shadow: var(--contrast-outline);
   left: clamp(20px, 4.3vw, 74px);
   line-height: 1.35;
 }
@@ -921,7 +916,6 @@ main:not(.force-motion) .opening-video {
 }
 
 .social-copy h2 {
-  text-shadow: var(--contrast-outline);
   font-family: 'Bricolage Grotesque', sans-serif;
   font-size: clamp(32px, 4.2vw, 70px);
   font-optical-sizing: none;
@@ -1484,17 +1478,6 @@ main:not(.force-motion) *::after {
 
   .locations-foot {
     display: none;
-  }
-}
-
-.flavors-word {
-  text-shadow: var(--contrast-outline);
-}
-
-@media (max-width: 760px) {
-  .scene-copy,
-  .social-copy {
-    text-shadow: var(--contrast-outline);
   }
 }
 
