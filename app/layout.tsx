@@ -53,8 +53,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var q=new URLSearchParams(location.search).get('motion'),r=q==='reduced';if(q!=='reduced'&&q!=='full'){try{r=localStorage.getItem('paina-motion-v1')==='reduced'}catch(e){}}document.documentElement.dataset.motion=r?'reduced':'full'})();` }} />
         <link rel="image_src" href={socialCardUrl} />
         <meta name="thumbnail" content={socialCardUrl} />
         <link

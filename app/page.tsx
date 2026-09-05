@@ -12,7 +12,8 @@ const springMountainDirections =
 
 function FlavorsWord() {
   return (
-    <span className="flavors-word" aria-label="Flavors">
+    <span className="flavors-word">
+      <span className="visually-hidden">Flavors</span>
       <span className="brand-letter letter-teal" aria-hidden="true">F</span>
       <span className="brand-letter letter-aqua" aria-hidden="true">l</span>
       <span className="brand-letter letter-yellow" aria-hidden="true">a</span>
@@ -61,7 +62,7 @@ export default function Home() {
         ORDER NOW <ArrowUpRight />
       </a>
 
-      <div className="passage-scroll">
+      <div className="passage-scroll" tabIndex={0} role="region" aria-label="Menu and locations">
         <section
           className="scene opening-scene"
           id="top"
@@ -98,7 +99,8 @@ export default function Home() {
           <div className="opening-copy">
             <h1 id="opening-title">
               <span className="opening-line">
-                <span className="brand-name" aria-label="Pā‘ina">
+                <span className="brand-name">
+                  <span className="visually-hidden">Pā‘ina</span>
                   <span className="brand-letter letter-teal" aria-hidden="true">P</span>
                   <span className="brand-letter letter-aqua" aria-hidden="true">ā</span>
                   <span className="brand-letter letter-aqua" aria-hidden="true">‘</span>
@@ -108,7 +110,8 @@ export default function Home() {
                 </span>
                 <span className="means-word"> Means</span>
               </span>
-              <strong className="gathering-word" aria-label="Gathering.">
+              <strong className="gathering-word">
+                <span className="visually-hidden">Gathering.</span>
                 <span className="brand-letter letter-teal" aria-hidden="true">G</span>
                 <span className="brand-letter letter-aqua" aria-hidden="true">a</span>
                 <span className="brand-letter letter-yellow" aria-hidden="true">t</span>

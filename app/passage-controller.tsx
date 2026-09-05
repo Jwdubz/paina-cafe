@@ -1,11 +1,14 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const SCROLL_TAU_SECONDS = 0.41;
 const SCROLL_SETTLE_PROGRESS = 0.995;
+const MOTION_PREFERENCE_KEY = 'paina-motion-v1';
 
 export function PassageController() {
+  const motionControl = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     const scroller = document.querySelector<HTMLElement>('.passage-scroll');
     const main = document.querySelector<HTMLElement>('main');
@@ -19,8 +22,25 @@ export function PassageController() {
     if (!scroller || !main || scenes.length === 0) return;
 
     const motionOverride = new URLSearchParams(window.location.search).get('motion');
-    const reduced = motionOverride === 'reduced';
+    let reduced = motionOverride === 'reduced';
+    if (motionOverride !== 'reduced' && motionOverride !== 'full') {
+      try {
+        reduced = window.localStorage.getItem(MOTION_PREFERENCE_KEY) === 'reduced';
+      } catch {
+        // The control still works when browser storage is unavailable.
+      }
+    }
     main.classList.toggle('force-motion', !reduced);
+    document.documentElement.dataset.motion = reduced ? 'reduced' : 'full';
+    const updateMotionControl = () => {
+      const button = motionControl.current;
+      if (!button) return;
+      const label = reduced ? 'Play motion' : 'Pause motion';
+      button.setAttribute('aria-label', label);
+      button.title = label;
+      button.textContent = reduced ? '▶' : 'Ⅱ';
+    };
+    updateMotionControl();
 
     const visibility = new Map<HTMLElement, number>(
       scenes.map((scene) => [scene, 0]),
@@ -36,6 +56,9 @@ export function PassageController() {
     let touchStartX: number | null = null;
     let touchStartY: number | null = null;
     let touchNavigated = false;
+    const scenesFitViewport = () => scenes.every(
+      (scene) => scene.offsetHeight <= scroller.clientHeight + 1,
+    );
 
     const nearestSceneIndex = () => {
       const scrollTop = scroller.scrollTop;
@@ -74,7 +97,7 @@ export function PassageController() {
 
     const goToScene = (index: number) => {
       const nextIndex = Math.max(0, Math.min(scenes.length - 1, index));
-      if (nextIndex === nearestSceneIndex()) return;
+      if (Math.abs(scroller.scrollTop - scenes[nextIndex].offsetTop) < 1) return;
 
       transitionLocked = true;
       scrollAnimationStart = scroller.scrollTop;
@@ -98,6 +121,7 @@ export function PassageController() {
 
     const handleWheel = (event: WheelEvent) => {
       if (event.ctrlKey || Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+      if (!scenesFitViewport()) return;
 
       event.preventDefault();
       if (wheelIdleTimer !== undefined) window.clearTimeout(wheelIdleTimer);
@@ -122,6 +146,7 @@ export function PassageController() {
     };
 
     const handleTouchMove = (event: TouchEvent) => {
+      if (!scenesFitViewport()) return;
       const touch = event.touches[0];
       if (!touch || touchStartX === null || touchStartY === null) return;
 
@@ -145,14 +170,17 @@ export function PassageController() {
     const handleKeyDown = (event: KeyboardEvent) => {
       const target = event.target as HTMLElement | null;
       if (
+        event.defaultPrevented ||
         event.altKey ||
         event.ctrlKey ||
         event.metaKey ||
         target?.isContentEditable ||
-        target?.matches('input, textarea, select')
+        target?.closest('button, input, textarea, select, [role="button"]')
       ) {
         return;
       }
+
+      if (!scenesFitViewport()) return;
 
       if (event.key === 'Home' || event.key === 'End') {
         event.preventDefault();
@@ -214,11 +242,36 @@ export function PassageController() {
         }
 
         if (video.networkState === HTMLMediaElement.NETWORK_EMPTY) video.load();
-        void video.play().catch(() => {
+        void video.play().then(() => {
+          if (reduced || document.hidden || video.dataset.playbackActive !== 'true') {
+            video.pause();
+          }
+        }).catch(() => {
           // The source-bound poster remains if muted inline autoplay is declined.
         });
       });
     };
+
+    const toggleMotion = () => {
+      reduced = !reduced;
+      main.classList.toggle('force-motion', !reduced);
+      document.documentElement.dataset.motion = reduced ? 'reduced' : 'full';
+      updateMotionControl();
+      if (reduced && scrollAnimationFrame !== undefined) releaseTransition();
+      try {
+        window.localStorage.setItem(MOTION_PREFERENCE_KEY, reduced ? 'reduced' : 'full');
+      } catch {
+        // Keep the visitor's choice active for this page even without storage.
+      }
+      const url = new URL(window.location.href);
+      if (url.searchParams.has('motion')) {
+        url.searchParams.set('motion', reduced ? 'reduced' : 'full');
+        window.history.replaceState(null, '', url);
+      }
+      sync();
+    };
+    const button = motionControl.current;
+    button?.addEventListener('click', toggleMotion);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -249,6 +302,7 @@ export function PassageController() {
 
     return () => {
       observer.disconnect();
+      button?.removeEventListener('click', toggleMotion);
       document.removeEventListener('visibilitychange', handleVisibility);
       scroller.removeEventListener('wheel', handleWheel);
       scroller.removeEventListener('touchstart', handleTouchStart);
@@ -268,5 +322,15 @@ export function PassageController() {
     };
   }, []);
 
-  return null;
+  return (
+    <button
+      ref={motionControl}
+      className="motion-control"
+      type="button"
+      aria-label="Pause motion"
+      title="Pause motion"
+    >
+      Ⅱ
+    </button>
+  );
 }
