@@ -55,6 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script type="text/javascript" dangerouslySetInnerHTML={{ __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "yvve5xueah");clarity("set","site","paina");` }} />
         <script dangerouslySetInnerHTML={{ __html: `(function(){var q=new URLSearchParams(location.search).get('motion'),r=q==='reduced';if(q!=='reduced'&&q!=='full'){try{r=localStorage.getItem('paina-motion-v1')==='reduced'}catch(e){}}document.documentElement.dataset.motion=r?'reduced':'full'})();` }} />
         <link rel="image_src" href={socialCardUrl} />
         <meta name="thumbnail" content={socialCardUrl} />
